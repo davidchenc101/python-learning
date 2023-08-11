@@ -15,7 +15,7 @@ n2 = int(input("請輸入數字二："))
 op = input("請輸入運算符號：+ - * /：")
 if op == "+":
     print(n1 + n2)
-elif op == "-":
+elif op == "-":  # 小心if要加冒號
     print(n1 - n2)
 elif op == "*":
     print(n1 * n2)
