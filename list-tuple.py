@@ -23,5 +23,5 @@ print(data)
 # 有序不可變動列表 Tuple
 data2 = (3, 4, 5)
 print("data2＝", data2)
-# 跟list差別在 打這串會error
+# 跟list差別在 打下面這串會error
 # data[0]=5  #不能把5放入data2[0]的位置（因為是小括號
