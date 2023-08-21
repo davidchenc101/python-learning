@@ -144,3 +144,10 @@ else:
 # 綜合範例：找出整數平方根
 # 輸入9，得到3，輸入11，得到沒有
 v = input("輸入一個正整數：")
+v = int(v)  # 轉換輸入成數字
+for i in range(v):
+    if i * i == v:
+        print("整數平方根", i)
+        break  # 用break強制結束回圈時，不會執行else區域
+else:
+    print("沒有整數平方根")
