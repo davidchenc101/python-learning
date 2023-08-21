@@ -14,7 +14,7 @@ print("sum = ", sum)  # 沒縮排 就不在迴圈迴圈中
 
 
 # for 迴圈
-for x in [3, 5, 1]:  # 把列表資料一一撈出
+for x in [3, 5, 1]:  # 把列表資料一一撈出，抓出3放入x,print一次
     print(x)
 for c in "hello":  # 分別把字元撈出
     print(c)
@@ -22,7 +22,7 @@ for v in range(5):  # range(3)相當於[0,1,2]的列表  for x in range(3) == fo
     print(v)  # for x in range(3,6) == for x in [3,4,5]
 
 # 希望迴圈跑10次
-for z in range(11):
+for z in range(11):  # 幫我們製造連續數字的列表
     print("這是第", z, "次")
 
 # 1+2+3+4...+10
