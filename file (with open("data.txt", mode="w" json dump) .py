@@ -111,7 +111,7 @@ print("version ", data["version"])
 data["name"] = "cool name"
 # 把最新的資料覆寫回檔案中
 with open("config.json", mode="w") as file:
-    json.dump(data, file)
+    json.dump(data, file)  # 把字典的結構轉換成對應的 JSON 格式字串，然後儲存到檔案中
 
 
 """
@@ -137,4 +137,34 @@ var point={"x":3 , "y":4 ,
 (可以視為python的字典)
 
 
+"""
+
+
+# ----------------------------------疑惑區-------------------------------------------------------------
+
+
+# for x in range(11):
+#     sum=sum+x
+
+# with open("data.txt",mode="r") as file:
+#     for line in file:             #file這邊也算個列表？
+#         sum = sum + int(line)
+# print(sum)
+
+"""
+請問file是物件還是一個變數?
+ans:file 是變數，裡面存放一個物件。
+
+2. 之前在教for語法的時候，有說in的後面必須是列表，現在這樣使用是否代表儲存的檔案物件"file"本質是一種列表呢？
+ans:
+這個問題非常的好，其實 for in 的後面不一定要是列表，
+他是一個更廣泛的概念就做 Iterable Object，但這個概念有點深入，所以我入門教學的時會稍微簡化或省略細節。
+
+ans:
+file 物件本身是一個 Iterable Object 所以可以放在 for in 的後面。
+for data in file.read() 則是把 file.read() 取得的字串放在 for in 的後面，不太一樣的狀況。
+
+ans:
+file 可以粗略的理解成是一個檔案物件，對於檔案物件做 for 迴圈會有一行一行讀取的效果，不會算進換行符號 \n。
+這個和你直接用字串去跑 for 迴圈是不同的。
 """
